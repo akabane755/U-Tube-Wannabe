@@ -102,9 +102,9 @@ const loadVideos=(val="")=>
           <div class="w-[95vw]  ">
           <div class="flex flex-col items-center justify-center  mt-[10%] mx-auto">
           <div>
-          <img src="icon.png">
+          <img src="Icon.png">
           </div>
-          <p class="text-[32px] font-bold">Oops!! Sorry, There is no content here</p>
+          <p class="text-[32px] font-bold text-center">Oops!! Sorry, There is no content here</p>
           </div>
           </div>
           `
