@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PH-TUBE</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+<script>
+    module.exports = {
+  theme: {
+    extend: {
+      fontFamily: {
+        inter: ["Inter", "sans-serif"],
+      },
+    },
+  },
+  plugins: [],
+};
+
+</script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="w-[95%]  mx-auto font-inter">
+    
+    <div class="flex  flex-col xl:flex-row justify-between items-center gap-4 py-12 border-b-[1px] border-gray-400">
+        <div>
+            <img src="Logo.png" alt="">
+            
+        </div>
+        <div ><label id="inSearch" class="input">
+          <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g stroke-linejoin="round" stroke-linecap="round" stroke-width="2.5" fill="none" stroke="currentColor"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></g></svg>
+          <input type="search" required placeholder="Search"/>
+        </label> </div>
+        <div><button class="btn btn-lg bg-[#FF1F3D] text-white" >Sort By View</button></div>
+
+    </div>
+    <section id="btnContainer" class="flex  justify-center  items-center gap-6 my-8">
+        <div><button onclick="loadVideos()" id="btn-all" class="btn text-[#252525B3] bg-[#25252526]">All</button></div>
+    </section>
+   <section id="loader" class="text-center py-10 hidden"><span class="loading loading-dots loading-xl"></span></section>
+    <section id="vdoContainer" class=" grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-6" >
+      <div class="w-[95vw]  ">
+        <div class="flex flex-col items-center justify-center  mt-[10%] mx-auto">
+        <div>
+        <img src="icon.png">
+        </div>
+        <p class="text-[32px] font-bold text-center">Oops!! Sorry, There is no content here</p>
+        </div>
+        </div>
+    </section>
+    <dialog id="vdoDetails" class="modal">
+      <div class="modal-box">
+      <div id="vdoDetailsContainer">
+        
+      </div>
+      </div>
+      <form method="dialog" class="modal-backdrop">
+        <button>close</button>
+      </form>
+    </dialog>
+    <script src="index.js"></script>
+</body>
+</html>
